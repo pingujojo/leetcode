@@ -46,13 +46,7 @@ class Solution {
                 }
             }
         }
-        
-        for i in 0 ..< board.count {
-            for j in 0 ..< board[i].count {
-                board[i][j] >>= 1
-                print(board[i][j])
-            }
-        }
+        board = board.map { $0.map { $0 >> 1 } }
     }
     
     func liveneighbors(_ board: [[Int]], _ x :Int, _ y :Int) -> Int {
